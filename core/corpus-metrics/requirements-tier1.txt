@@ -1,0 +1,17 @@
+# Tested on CPython 3.12.13. Python 3.13 cannot install TextDescriptives' NumPy <2
+# constraint reliably on Windows, so use Python 3.10-3.12 for this environment.
+spacy==3.8.14
+textdescriptives==2.8.4
+taaled==0.32
+pylats==0.64
+lftk==1.0.9
+
+# TAALED/pylats still import pkg_resources; it was removed from newer setuptools.
+setuptools==80.9.0
+
+# spaCy 3.8.14's current dependency metadata does not pull this in on a clean install.
+click==8.3.1
+
+# Static vectors are required for meaningful TextDescriptives coherence. The small model
+# loads, but spaCy warns that its similarity values are not reliable for this purpose.
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.8.0/en_core_web_md-3.8.0-py3-none-any.whl

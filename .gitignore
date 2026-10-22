@@ -1,0 +1,5 @@
+# readfirst
+__pycache__/
+*.pyc
+.DS_Store
+project/worklog.md

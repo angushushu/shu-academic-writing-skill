@@ -1,0 +1,2 @@
+# Install on top of requirements-tier1.txt when using the local TAASSC source tree.
+lexical-diversity==0.1.1
